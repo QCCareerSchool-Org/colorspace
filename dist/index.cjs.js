@@ -155,7 +155,7 @@ const reverseNames = Object.create(null);
 
 // Create a list of reverse color names
 for (const name in cssKeywords) {
-  if (Object.hasOwnProperty.call(cssKeywords, name)) {
+  if (Object.prototype.hasOwnProperty.call(cssKeywords, name)) {
     reverseNames[cssKeywords[name]] = name;
   }
 }
@@ -246,7 +246,7 @@ cs.get.rgb = function (string) {
     if (match[1] === 'transparent') {
       return [0, 0, 0, 0];
     }
-    if (!Object.hasOwnProperty.call(cssKeywords, match[1])) {
+    if (!Object.prototype.hasOwnProperty.call(cssKeywords, match[1])) {
       return null;
     }
     rgb = cssKeywords[match[1]];
