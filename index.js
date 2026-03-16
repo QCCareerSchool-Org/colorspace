@@ -1,5 +1,10 @@
 'use strict';
 
+/**
+ * Note: have to replace Object.hasOwn with
+ * Object.prototype.hasOwnProperty.call in the dist file after building
+ */
+
 import color from 'color';
 import hex from 'text-hex';
 
