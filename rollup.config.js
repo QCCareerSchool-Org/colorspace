@@ -14,7 +14,17 @@ export default {
     json(),
     babel({
       babelHelpers: 'bundled',
-      exclude: 'node_modules/**'
+      // exclude: 'node_modules/**',
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              node: '10'
+            }
+          }
+        ]
+      ]
     })
   ],
   output: {
